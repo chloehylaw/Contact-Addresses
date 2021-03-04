@@ -2,7 +2,7 @@ package Local_Address;
 import Address.Address;
 
 /**
- *
+ * A way of contacting a Party via email
  */
 public class EmailAddress extends Address {
     private String userName;
@@ -12,7 +12,7 @@ public class EmailAddress extends Address {
     private String tld; //com, org, gov...
 
     /**
-     *
+     * Default constructor
      */
     public EmailAddress(){
         super();
@@ -24,14 +24,14 @@ public class EmailAddress extends Address {
     }
 
     /**
-     *
-     * @param validFrom
-     * @param validTo
-     * @param userName
-     * @param atSign
-     * @param domainName
-     * @param dot
-     * @param tld
+     * Parametrized constructor
+     * @param validFrom String representing a starting date in the format "YYYY-MM-DD"
+     * @param validTo String representing a expiring date in the format "YYYY-MM-DD"
+     * @param userName String representing the username
+     * @param atSign String representing @
+     * @param domainName String representing the domain name
+     * @param dot String representing "."
+     * @param tld String representing the tld
      */
     public EmailAddress(String validFrom, String validTo, String userName, String atSign, String domainName, String dot, String tld){
         super(validFrom, validTo);
@@ -43,21 +43,20 @@ public class EmailAddress extends Address {
     }
 
     /**
-     *
-     * @param otherEmailAddress
+     * Copy constructor
+     * @param otherEmailAddress the copied object
      */
     public EmailAddress(EmailAddress otherEmailAddress){
         super(otherEmailAddress);
         this.userName = new String(otherEmailAddress.userName);
         this.atSign = new String(otherEmailAddress.atSign);
-        this.domainName = new String(otherEmailAddress.domainName);
+        this.domainName = otherEmailAddress.domainName;
         this.dot = new String(otherEmailAddress.dot);
         this.tld = new String(otherEmailAddress.tld);
     }
 
     /**
-     *
-     * @return
+     * @return userName
      */
     public String getUserName(){
         return userName;
@@ -65,47 +64,42 @@ public class EmailAddress extends Address {
 
     /**
      *
-     * @return
+     * @return atSign
      */
     public String getAtSign(){
         return atSign;
     }
 
     /**
-     *
-     * @return
+     * @return domainName
      */
     public String getDomainName(){
         return domainName;
     }
 
     /**
-     *
-     * @return
+     * @return dot
      */
     public String getDot(){
         return dot;
     }
 
     /**
-     *
-     * @return
+     * @return tld
      */
     public String getTld(){
         return tld;
     }
 
     /**
-     *
-     * @param userName
+     * @param userName Set userName
      */
     public void setUserName(String userName) {
         this.userName = userName;
     }
 
     /**
-     *
-     * @param atSign
+     * @param atSign Set atSign
      */
     public void setAtSign(String atSign) {
         this.atSign = atSign;
@@ -113,31 +107,28 @@ public class EmailAddress extends Address {
 
     /**
      *
-     * @param domainName
+     * @param domainName Set domainName
      */
     public void setDomainName(String domainName) {
         this.domainName = domainName;
     }
 
     /**
-     *
-     * @param dot
+     * @param dot Set dot
      */
     public void setDot(String dot) {
         this.dot = dot;
     }
 
     /**
-     *
-     * @param tld
+     * @param tld Set tld
      */
     public void setTld(String tld) {
         this.tld = tld;
     }
 
     /**
-     *
-     * @return
+     * @return the validFrom and validTo of the address and the specific email address
      */
     @Override
     public String toString() {
@@ -146,9 +137,8 @@ public class EmailAddress extends Address {
     }
 
     /**
-     *
-     * @param otherAddress
-     * @return
+     * @param otherAddress the compared object
+     * @return whether they are equal or not
      */
     @Override
     public boolean equals(Address otherAddress) {
