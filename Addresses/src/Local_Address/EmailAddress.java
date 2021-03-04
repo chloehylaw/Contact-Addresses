@@ -1,8 +1,9 @@
 package Local_Address;
 import Address.Address;
 
-import java.util.Objects;
-
+/**
+ *
+ */
 public class EmailAddress extends Address {
     private String userName;
     private String atSign; //@
@@ -10,6 +11,9 @@ public class EmailAddress extends Address {
     private String dot; //.
     private String tld; //com, org, gov...
 
+    /**
+     *
+     */
     public EmailAddress(){
         super();
         userName = "mother";
@@ -19,6 +23,16 @@ public class EmailAddress extends Address {
         tld = "com";
     }
 
+    /**
+     *
+     * @param validFrom
+     * @param validTo
+     * @param userName
+     * @param atSign
+     * @param domainName
+     * @param dot
+     * @param tld
+     */
     public EmailAddress(String validFrom, String validTo, String userName, String atSign, String domainName, String dot, String tld){
         super(validFrom, validTo);
         this.userName = userName;
@@ -28,76 +42,136 @@ public class EmailAddress extends Address {
         this.tld = tld;
     }
 
+    /**
+     *
+     * @param otherEmailAddress
+     */
     public EmailAddress(EmailAddress otherEmailAddress){
         super(otherEmailAddress);
-        this.userName = otherEmailAddress.userName;
-        this.atSign = otherEmailAddress.atSign;
-        this.domainName = otherEmailAddress.domainName;
-        this.dot = otherEmailAddress.dot;
-        this.tld = otherEmailAddress.tld;
+        this.userName = new String(otherEmailAddress.userName);
+        this.atSign = new String(otherEmailAddress.atSign);
+        this.domainName = new String(otherEmailAddress.domainName);
+        this.dot = new String(otherEmailAddress.dot);
+        this.tld = new String(otherEmailAddress.tld);
     }
 
+    /**
+     *
+     * @return
+     */
     public String getUserName(){
         return userName;
     }
 
+    /**
+     *
+     * @return
+     */
     public String getAtSign(){
         return atSign;
     }
 
+    /**
+     *
+     * @return
+     */
     public String getDomainName(){
         return domainName;
     }
 
+    /**
+     *
+     * @return
+     */
     public String getDot(){
         return dot;
     }
 
+    /**
+     *
+     * @return
+     */
     public String getTld(){
         return tld;
     }
 
+    /**
+     *
+     * @param userName
+     */
     public void setUserName(String userName) {
         this.userName = userName;
     }
 
+    /**
+     *
+     * @param atSign
+     */
     public void setAtSign(String atSign) {
         this.atSign = atSign;
     }
 
+    /**
+     *
+     * @param domainName
+     */
     public void setDomainName(String domainName) {
         this.domainName = domainName;
     }
 
+    /**
+     *
+     * @param dot
+     */
     public void setDot(String dot) {
         this.dot = dot;
     }
 
+    /**
+     *
+     * @param tld
+     */
     public void setTld(String tld) {
         this.tld = tld;
     }
 
+    /**
+     *
+     * @return
+     */
     @Override
     public String toString() {
         return "The EmailAddress is valid from " + this.getValidFrom() + " to " + this.getValidTo() +".\n" +
                 "The email address is " + this.getUserName() + this.getAtSign() + this.getDomainName() + this.getDot() + this.getTld() + ".";
     }
 
+    /**
+     *
+     * @param otherAddress
+     * @return
+     */
     @Override
     public boolean equals(Address otherAddress) {
-        if (this == otherAddress) return true;
-        if (otherAddress == null || getClass() != otherAddress.getClass()) return false;
-        if (!super.equals(otherAddress)) return false;
-
-        EmailAddress emailAddress = (EmailAddress) otherAddress;
-
-        if (!Objects.equals(userName, emailAddress.userName)) return false;
-        if (!Objects.equals(atSign, emailAddress.atSign)) return false;
-        if (!Objects.equals(domainName, emailAddress.domainName)) return false;
-        if (!Objects.equals(dot, emailAddress.dot)) return false;
-        return Objects.equals(tld, emailAddress.tld);
+        if(otherAddress == null)
+            return false;
+        else if(getClass() != otherAddress.getClass())
+            return false;
+        else{
+            EmailAddress otherEmailAddress = (EmailAddress) otherAddress;
+            return this.getValidFrom().equals(otherEmailAddress.getValidFrom())
+                    && this.getValidTo().equals(otherEmailAddress.getValidTo())
+                    && this.getUserName().equals(otherEmailAddress.getUserName())
+                    && this.getAtSign().equals(otherEmailAddress.getAtSign())
+                    && this.getDomainName().equals(otherEmailAddress.getDomainName())
+                    && this.getDot().equals(otherEmailAddress.getDot())
+                    && this.getTld().equals(otherEmailAddress.getTld());
+        }
     }
 
+    /**
+     * Calculate the value consistent with the definition of equality for the class
+     * @return the current instance of the class
+     */
     @Override
     public int hashCode() {
         int result = super.hashCode();

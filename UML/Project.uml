@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>Address.Address</OriginalElement>
+  <nodes>
+    <node x="0.0" y="608.0">International_Address.PostOfficeBoxAddress</node>
+    <node x="473.0" y="619.0">International_Address.GeographicAddress.Locale</node>
+    <node x="355.0" y="260.0">International_Address.GeographicAddress</node>
+    <node x="1002.75" y="0.0">Address.Address</node>
+    <node x="1071.0" y="271.0">Local_Address.EmailAddress</node>
+    <node x="794.0" y="315.0">Local_Address.WebPageAddress</node>
+    <node x="675.0" y="608.0">International_Address.GeneralDeliveryAddress</node>
+    <node x="1475.0" y="260.0">Local_Address.TelecomAddress</node>
+    <node x="0.0" y="841.0">Address.Driver</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="International_Address.GeneralDeliveryAddress" target="International_Address.GeographicAddress">
+      <point x="0.0" y="-94.0" />
+      <point x="921.5" y="583.0" />
+      <point x="704.1666666666666" y="583.0" />
+      <point x="139.66666666666663" y="149.0" />
+    </edge>
+    <edge source="Local_Address.EmailAddress" target="Address.Address">
+      <point x="0.0" y="-138.0" />
+      <point x="1263.0" y="240.0" />
+      <point x="1114.625" y="240.0" />
+      <point x="22.375" y="105.0" />
+    </edge>
+    <edge source="International_Address.PostOfficeBoxAddress" target="International_Address.GeographicAddress">
+      <point x="0.0" y="-94.0" />
+      <point x="226.5" y="583.0" />
+      <point x="424.83333333333337" y="583.0" />
+      <point x="-139.66666666666663" y="149.0" />
+    </edge>
+    <edge source="Local_Address.TelecomAddress" target="Address.Address">
+      <point x="0.0" y="-149.0" />
+      <point x="1673.0" y="230.0" />
+      <point x="1159.375" y="230.0" />
+      <point x="67.125" y="105.0" />
+    </edge>
+    <edge source="Local_Address.WebPageAddress" target="Address.Address">
+      <point x="0.0" y="-94.0" />
+      <point x="922.5" y="240.0" />
+      <point x="1069.875" y="240.0" />
+      <point x="-22.375" y="105.0" />
+    </edge>
+    <edge source="International_Address.GeographicAddress" target="Address.Address">
+      <point x="0.0" y="-149.0" />
+      <point x="564.5" y="230.0" />
+      <point x="1025.125" y="230.0" />
+      <point x="-67.125" y="105.0" />
+    </edge>
+    <edge source="International_Address.GeographicAddress.Locale" target="International_Address.GeographicAddress">
+      <point x="0.0" y="-83.0" />
+      <point x="0.0" y="149.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="0.8313061872025383" x="935.5" y="469.5" />
+  <SelectedNodes>
+    <node>International_Address.GeneralDeliveryAddress</node>
+  </SelectedNodes>
+  <Categories>
+    <Category>Fields</Category>
+    <Category>Constructors</Category>
+    <Category>Methods</Category>
+    <Category>Properties</Category>
+    <Category>Inner Classes</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+

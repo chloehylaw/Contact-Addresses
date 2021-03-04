@@ -7,8 +7,19 @@ import Local_Address.EmailAddress;
 import Local_Address.TelecomAddress;
 import Local_Address.WebPageAddress;
 
+/**
+ * The driver class to enable the program to run
+ */
 public class Driver {
 
+    /**
+     * Method to search the array of Addresses and display all the addresses that are/were obsolete in comparison to the passed date
+     * @param name String[] array representing the name of the address
+     * @param address Address[] array representing the address
+     * @param year Integer representing the year of the given date
+     * @param month Integer representing the month of the given date
+     * @param day Integer representing the day of the given date
+     */
     private static void traceObsoleteAddresses(String[] name, Address[] address, int year, int month, int day) {
 
         String[] validFrom = new String[16];
@@ -52,7 +63,23 @@ public class Driver {
         }
     }
 
+    /**
+     * Method that copy the Addresses
+     * @param address Address[] array representing the address
+     * @return copyAddress
+     */
+    private static Address[] copyAddresses(Address[] address){
+        Address[] copyAddress = new Address[address.length];
+        for(int i = 0; i < address.length; i++){
+            copyAddress[i] = address[i];
+        }
+        return copyAddress;
+    }
 
+    /**
+     * The main method to run the program
+     * @param args arguments
+     */
     public static void main (String[]args){
 
         System.out.println("\n------------------------------PART 1------------------------------\n");
@@ -62,7 +89,7 @@ public class Driver {
         Address home = new Address(); //default constructor
         address[0] = home;
         name[0] = "HOME ADDRESS";
-        Address apartment = new Address("2019-02-10", "2020-06-10"); //parametrized constructor
+        Address apartment = new Address("2018-02-10", "2020-06-10"); //parametrized constructor
         address[1] = apartment;
         name[1] = "APARTMENT ADDRESS";
 
@@ -124,10 +151,9 @@ public class Driver {
         address[15] = purolator;
         name[15] = "PUROLATOR ADDRESS";
 
-        /*System.out.println("-----------------------DISPLAY THE ADDRESSES----------------------\n");
+        System.out.println("-----------------------DISPLAY THE ADDRESSES----------------------\n");
         for(int i = 0; i < address.length; i++){
-            System.out.println((i+1) + ". " +name[i]);
-            System.out.println(address[i] + "\n");
+            System.out.println((i+1) + ". " +name[i] + "\n" +address[i] + "\n");
         }
         System.out.println("--------------------FIND THE OBSOLETE ADDRESSES-------------------\n");
         System.out.println("The obsolete date is 2020-01-15.\n");
@@ -149,9 +175,13 @@ public class Driver {
         System.out.println("Is COSTCO ADDRESS equals to MUSEUM ADDRESS? (The answer should be false) \n→ "
                 + costco.equals(museum));
         System.out.println("They are from different classes with different constructors, that is why they are not equal.\n");
-        */
 
         System.out.println("\n------------------------------PART 2------------------------------\n");
+        for(int i = 0; i <address.length; i++){
+            System.out.println((i+1) + ". COPY " + name[i] + "\n" +copyAddresses(address)[i] + "\n");
+            System.out.println((i+1) + ". " +name[i] + "\n" +address[i] + "\n");
+        }
+
     }
 }
 
