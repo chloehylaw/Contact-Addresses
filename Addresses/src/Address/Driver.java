@@ -1,3 +1,7 @@
+// -----------------------------------------------------
+// Part: 1 & 2
+// Written by: Chloe Hei Yu Law - 40173275
+// -----------------------------------------------------
 package Address;
 
 import International_Address.GeneralDeliveryAddress;
@@ -81,6 +85,11 @@ public class Driver {
      * @param args arguments
      */
     public static void main (String[]args){
+
+        System.out.println("\nThe purpose of this assignment is to practice class inheritance, composition and\n" +
+                "other Object Oriented Programming concepts. The first part is to practice on concepts \n" +
+                "such as creating constructors, using the proper access rights and method overriding.\n" +
+                "The second part is to understand how to copy an object without the clone method.");
 
         System.out.println("\n------------------------------PART 1------------------------------\n");
         Address[] address = new Address[16];
@@ -181,6 +190,8 @@ public class Driver {
             System.out.println((i+1) + ". COPY " + name[i] + "\n" +copyAddresses(address)[i] + "\n");
             System.out.println((i+1) + ". " +name[i] + "\n" +address[i] + "\n");
         }
+
+        System.out.println("The program has ended");
 
     }
 }

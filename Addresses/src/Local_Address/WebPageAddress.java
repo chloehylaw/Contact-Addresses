@@ -1,3 +1,8 @@
+// -----------------------------------------------------
+// Part: 1
+// Written by: Chloe Hei Yu Law - 40173275
+// -----------------------------------------------------
+
 package Local_Address;
 import Address.Address;
 
@@ -32,7 +37,7 @@ public class WebPageAddress extends Address {
      */
     public WebPageAddress(WebPageAddress otherWebPageAddress){
         super(otherWebPageAddress);
-        this.url = new String(otherWebPageAddress.url);
+        this.url = otherWebPageAddress.url;
     }
 
     /**

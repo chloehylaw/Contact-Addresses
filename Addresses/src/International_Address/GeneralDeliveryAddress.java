@@ -1,3 +1,8 @@
+// -----------------------------------------------------
+// Part: 1
+// Written by: Chloe Hei Yu Law - 40173275
+// -----------------------------------------------------
+
 package International_Address;
 import Address.Address;
 import Local_Address.TelecomAddress;

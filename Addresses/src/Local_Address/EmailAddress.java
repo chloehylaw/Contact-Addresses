@@ -1,3 +1,8 @@
+// -----------------------------------------------------
+// Part: 1
+// Written by: Chloe Hei Yu Law - 40173275
+// -----------------------------------------------------
+
 package Local_Address;
 import Address.Address;
 
@@ -48,11 +53,11 @@ public class EmailAddress extends Address {
      */
     public EmailAddress(EmailAddress otherEmailAddress){
         super(otherEmailAddress);
-        this.userName = new String(otherEmailAddress.userName);
-        this.atSign = new String(otherEmailAddress.atSign);
+        this.userName = otherEmailAddress.userName;
+        this.atSign = otherEmailAddress.atSign;
         this.domainName = otherEmailAddress.domainName;
-        this.dot = new String(otherEmailAddress.dot);
-        this.tld = new String(otherEmailAddress.tld);
+        this.dot = otherEmailAddress.dot;
+        this.tld = otherEmailAddress.tld;
     }
 
     /**

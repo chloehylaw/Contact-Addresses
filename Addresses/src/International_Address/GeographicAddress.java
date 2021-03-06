@@ -1,3 +1,8 @@
+// -----------------------------------------------------
+// Part: 1
+// Written by: Chloe Hei Yu Law - 40173275
+// -----------------------------------------------------
+
 package International_Address;
 import Address.Address;
 
@@ -147,10 +152,10 @@ public class GeographicAddress extends Address {
     public GeographicAddress(GeographicAddress otherGeographicAddress){
         this.setValidFrom(otherGeographicAddress.getValidFrom());
         this.setValidTo(otherGeographicAddress.getValidTo());
-        this.addressLine = new String(otherGeographicAddress.addressLine);
-        this.city = new String(otherGeographicAddress.city);
-        this.regionOrState = new String(otherGeographicAddress.regionOrState);
-        this.zipOrPostCode = new String(otherGeographicAddress.zipOrPostCode);
+        this.addressLine = otherGeographicAddress.addressLine;
+        this.city = otherGeographicAddress.city;
+        this.regionOrState = otherGeographicAddress.regionOrState;
+        this.zipOrPostCode = otherGeographicAddress.zipOrPostCode;
     }
 
     /**

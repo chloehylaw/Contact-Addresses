@@ -1,3 +1,8 @@
+// -----------------------------------------------------
+// Part: 1
+// Written by: Chloe Hei Yu Law - 40173275
+// -----------------------------------------------------
+
 package Local_Address;
 import Address.Address;
 
@@ -52,12 +57,12 @@ public class TelecomAddress extends Address {
      */
     public TelecomAddress(TelecomAddress otherTelecomAddress){
         super(otherTelecomAddress);
-        this.countryCode = new String(otherTelecomAddress.countryCode);
-        this.nationalDirectDialingPrefix = new String(otherTelecomAddress.nationalDirectDialingPrefix);
+        this.countryCode = otherTelecomAddress.countryCode;
+        this.nationalDirectDialingPrefix = otherTelecomAddress.nationalDirectDialingPrefix;
         this.areaCode = new Integer(otherTelecomAddress.areaCode);
         this.number = new Long(otherTelecomAddress.number);
         this.extension = new Integer(otherTelecomAddress.extension);
-        this.physicalType = new String(otherTelecomAddress.physicalType);
+        this.physicalType = otherTelecomAddress.physicalType;
     }
 
     /**

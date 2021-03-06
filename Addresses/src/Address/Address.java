@@ -1,3 +1,8 @@
+// -----------------------------------------------------
+// Part: 1
+// Written by: Chloe Hei Yu Law - 40173275
+// -----------------------------------------------------
+
 package Address;
 
 /**
@@ -31,8 +36,8 @@ public class Address {
      * @param otherAddress the copied object
      */
     public Address(Address otherAddress) {
-        this.validFrom = new String(otherAddress.validFrom);
-        this.validTo = new String(otherAddress.validTo);
+        this.validFrom = otherAddress.validFrom;
+        this.validTo = otherAddress.validTo;
     }
 
     /**
